@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/VandiKond/Stocks.go/config"
 	"github.com/VandiKond/Stocks.go/messages"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 
@@ -22,7 +23,7 @@ func main() {
 	}
 	c.Start()
 
-	bot, err := tgbotapi.NewBotAPI(Tocken)
+	bot, err := tgbotapi.NewBotAPI(config.Tocken)
 	if err != nil {
 		panic(err)
 	}
